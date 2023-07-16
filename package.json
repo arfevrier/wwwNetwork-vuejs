@@ -1,0 +1,22 @@
+{
+  "name": "www-network",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+
+    "roboto-fontface": "*",
+    "vue": "^3.3.4",
+    "vuetify": "^3.3.8",
+    "webfontloader": "*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "*",
+    "vite": "^4.4.0",
+    "vite-plugin-vuetify": "^1.0.2"
+  }
+}
