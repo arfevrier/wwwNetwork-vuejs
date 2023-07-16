@@ -17,7 +17,7 @@
 
         <v-btn
           text
-          href="https://apps.arfevrier.fr/www_network/"
+          href="./"
         >
         {{ title }}
         </v-btn>
