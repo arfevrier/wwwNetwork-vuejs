@@ -119,12 +119,20 @@
           this.$data.url = id
           this.generate()
         },
-        generate(){
+        async generate(){
             this.$data.erreur = false
             this.$data.chargement = true
             var info = this.$data.url
             this.$data.url = ''
             this.$data.infos.length = 0
+
+            // Empty input field: Get user IP
+            if (info.length == 0){
+              console.log(info)
+              await this.ip().then(resp =>
+                  info = resp
+              )
+            }
 
             // AS
             if (info.startsWith('AS')){ 
@@ -179,6 +187,16 @@
                   this.$data.chargement = false
                 });
             }
+        },
+        async ip(){
+          return fetch(`${stc.afr.api}/ip`)
+          .then(resp => {
+              if(!resp.ok){ throw 'http.code != 200' }
+              return resp.json()
+          })
+          .catch(err => {
+              console.log(err);
+          })
         },
         nmap(value){
           this.$data.infos.unshift({title: 'Nmap (~5s)', loading: true, color:'#8341a5', size:'6', id: 'nmap'})
