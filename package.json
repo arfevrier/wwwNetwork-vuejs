@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "roboto-fontface": "0.10.0",
-    "vue": "^3.4.31",
-    "vuetify": "^3.6.11",
+    "vue": "^3.5.13",
+    "vuetify": "^3.8.2",
     "webfontloader": "1.6.28"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.5",
-    "vite": "^5.3.3",
-    "vite-plugin-vuetify": "^2.0.3"
+    "@vitejs/plugin-vue": "^5.2.3",
+    "vite": "^6.3.1",
+    "vite-plugin-vuetify": "^2.1.1"
   }
 }
